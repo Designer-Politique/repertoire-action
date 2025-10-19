@@ -51,3 +51,7 @@ Pour vous faciliter la vie, voici un Google Sheets avec l'ensemble des actions :
 4. Trouvez un convertisseur CSV to JSON
 5. Renommez en actions.json
 6. Remplacez le fichier actions.json du projet
+
+## Modifier `logo.png`
+
+- Ajoutez votre propre logo.png
