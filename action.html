@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Répertoire d'actions politiques</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; }
+    .filters { margin: 20px 0; text-align: center; }
+    select { margin: 0 10px; padding: 5px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+    .card { display:flex; flex-direction:column; justify-content:space-between; border:1px solid #ddd; border-radius:10px; padding:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; min-height:280px; position:relative;}
+    .btn { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding:8px 12px; border-radius:6px; background:#007BFF; color:white; text-decoration:none; }
+    .btn:hover { background:#0056b3; }
+  </style>
+</head>
+<body>
+  <header style="
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#007BFF;
+  color:white;
+  padding:10px;
+  border-radius:0 0 15px 15px;
+  margin-bottom:25px;
+">
+  <img src="logo.png" alt="Logo" style="height:40px; margin-right:10px; border-radius:50%;">
+  <h1 style="margin:0; font-size:1.5em;">Répertoire d'actions politiques</h1>
+</header>
+
+
+
+  <div class="filters">
+    <label>Facilité:
+      <select id="faciliteFilter"><option value="">Toutes</option><option>Facile</option><option>Moyen</option><option>Difficile</option></select>
+    </label>
+    <label>Échelle:
+      <select id="echelleFilter"><option value="">Toutes</option><option>Individuel</option><option>Collectif</option></select>
+    </label>
+    <label>Rapidité:
+      <select id="rapiditeFilter"><option value="">Toutes</option><option>Rapide</option><option>Moyen</option><option>Lent</option></select>
+    </label>
+  </div>
+
+  <div id="actionsContainer" class="grid"></div>
+
+  <!-- Si fetch échoue, le script ci-dessous lira ce JSON embarqué :
+       Remplace le contenu du <script id="actions-data"> par ton JSON complet si tu veux -->
+  <script id="actions-data" type="application/json">
+  [
+    { "id": 1, "titre": "Signer une pétition", "facilite": "Facile", "echelle": "Individuel", "rapidite": "Rapide", "description": "Signer une pétition en ligne ou papier pour montrer son soutien à une cause.", "liens": [] },
+    { "id": 2, "titre": "Organiser une manifestation", "facilite": "Difficile", "echelle": "Collectif", "rapidite": "Lent", "description": "Planifier, déclarer en préfecture et mobiliser des personnes pour manifester.", "liens": [] }
+  ]
+  </script>
+
+  <script>
+    let actions = [];
+    const filters = { facilite: "", echelle: "", rapidite: "" };
+
+    async function loadActions() {
+      // première tentative : fetch (fonctionne si tu sers les fichiers via http)
+      try {
+        const res = await fetch('actions.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        actions = await res.json();
+      } catch (err) {
+        // fallback : lire le JSON embarqué dans la page
+        console.warn('fetch failed — fallback to embedded JSON', err);
+        const embed = document.getElementById('actions-data');
+        try {
+          actions = JSON.parse(embed.textContent);
+        } catch (e) {
+          console.error('embedded JSON parse error', e);
+          actions = [];
+        }
+      }
+      renderActions();
+    }
+
+    function renderActions() {
+      const container = document.getElementById('actionsContainer');
+      container.innerHTML = '';
+      const filtered = actions.filter(a =>
+        (filters.facilite === '' || a.facilite === filters.facilite) &&
+        (filters.echelle === '' || a.echelle === filters.echelle) &&
+        (filters.rapidite === '' || a.rapidite === filters.rapidite)
+      );
+      if (filtered.length === 0) {
+        container.innerHTML = '<p style="color:gray;font-style:italic;">Aucune action trouvée avec ces filtres.</p>';
+        return;
+      }
+      filtered.forEach(a => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div>
+            <h2>${a.titre}</h2>
+            <p>Facilité : ${a.facilite}</p>
+            <p>Échelle : ${a.echelle}</p>
+            <p>Rapidité : ${a.rapidite}</p>
+          </div>
+          <a class="btn" href="detail.html?id=${a.id}">Voir les détails</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    document.getElementById('faciliteFilter').addEventListener('change', e => { filters.facilite = e.target.value; renderActions(); });
+    document.getElementById('echelleFilter').addEventListener('change', e => { filters.echelle = e.target.value; renderActions(); });
+    document.getElementById('rapiditeFilter').addEventListener('change', e => { filters.rapidite = e.target.value; renderActions(); });
+
+    loadActions();
+  </script>
+</body>
+</html>

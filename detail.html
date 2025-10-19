@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail de l'action</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fafafa; display:flex; justify-content:center; padding-top:30px; }
+    .post { width:500px; background:#fff; border:1px solid #dbdbdb; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,0.1); overflow:hidden; }
+    .post-header { padding:15px; font-weight:bold; border-bottom:1px solid #eee; }
+    .post-content { padding:20px; }
+    .post-description { margin:15px 0; color:#333; line-height:1.6; }
+    .tags { margin-top:10px; }
+    .tag { display:inline-block; margin-right:8px; color:#007bff; text-decoration:none; font-size:14px; }
+    .post-footer { padding:15px; border-top:1px solid #eee; text-align:center; }
+    a.back { color:#555; text-decoration:none; }
+    a.back:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header style="text-align:center; margin-bottom:20px;">
+  <img src="logo.png" alt="Logo du répertoire" style="height:80px; border-radius:50%; margin-bottom:10px;">
+</header>
+
+  <div class="post" id="actionDetail"></div>
+
+  <!-- fallback JSON embarqué (remplace par ton JSON complet si tu veux) -->
+  <script id="actions-data" type="application/json">
+  [
+    { "id": 1, "titre": "Signer une pétition", "facilite": "Facile", "echelle": "Individuel", "rapidite": "Rapide", "description": "Signer une pétition en ligne ou papier pour montrer son soutien à une cause.", "liens": ["https://www.change.org"] },
+    { "id": 2, "titre": "Organiser une manifestation", "facilite": "Difficile", "echelle": "Collectif", "rapidite": "Lent", "description": "Planifier, déclarer en préfecture et mobiliser des personnes pour manifester.", "liens": ["https://www.service-public.fr"] }
+  ]
+  </script>
+
+  <script>
+    async function loadAction() {
+      let actions = [];
+      try {
+        const res = await fetch('actions.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        actions = await res.json();
+      } catch (err) {
+        console.warn('fetch failed — using embedded JSON', err);
+        const embed = document.getElementById('actions-data');
+        try { actions = JSON.parse(embed.textContent); } catch(e){ actions = []; }
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id'));
+      const action = actions.find(a => a.id === id);
+
+      const container = document.getElementById('actionDetail');
+      if (!action) { container.innerHTML = '<div class="post-content">Action introuvable.</div>'; return; }
+
+      container.innerHTML = `
+        <div class="post-header">${action.titre}</div>
+        <div class="post-content">
+          <div class="post-description">${action.description}</div>
+          <div><strong>Facilité :</strong> ${action.facilite}</div>
+          <div><strong>Échelle :</strong> ${action.echelle}</div>
+          <div><strong>Rapidité :</strong> ${action.rapidite}</div>
+          <div class="tags">
+            ${ (action.liens || []).map(l => `<a class="tag" href="${l}" target="_blank">🔗 ${l}</a>`).join(' ') }
+          </div>
+        </div>
+        <div class="post-footer"><a class="back" href="action.html">← Retour au répertoire</a></div>
+      `;
+    }
+    loadAction();
+  </script>
+</body>
+</html>

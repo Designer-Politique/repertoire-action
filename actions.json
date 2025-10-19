@@ -1,0 +1,298 @@
+[
+  {
+    "id": 1,
+    "titre": "Voter",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Rapide",
+    "description": "Voter lors d’élection permet de choisir les dirigeants."
+  },
+  {
+    "id": 2,
+    "titre": "Aider à compter les voix d'un vote",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "S’assurer du bon déroulement de l’élection. Lors du vote, demander aux personnes en charge s'il y a possibilité d’aider à compter les voix. Les personnes vous expliqueront le processus"
+  },
+  {
+    "id": 3,
+    "titre": "Liker un contenu poltique",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Rapide",
+    "description": "Soutiens la personne qui a publié le contenu et permet de mettre en avant ce type de contenu dans l’algorithme."
+  },
+  {
+    "id": 4,
+    "titre": "Commenter un contenu politique",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Rapide",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "titre": "Partager un contenu politique",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Rapide",
+    "description": "Permet de prendre position sur un sujet auprès de son cercle et ses abonnés"
+  },
+  {
+    "id": 6,
+    "titre": "Suivre des militants sur les réseaux",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet de suivre les actualités militantes, d’apprendre sur des sujets militants diverses et de s’inspirer pour des actions."
+  },
+  {
+    "id": 7,
+    "titre": "Donner de l'argent",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Permet de soutenir des causes et des associations."
+  },
+  {
+    "id": 8,
+    "titre": "Adhérer à une association",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Soutiens une association et les personnes qui en bénéficient."
+  },
+  {
+    "id": 9,
+    "titre": "Signer une pétition",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Rapide",
+    "description": "Permet de faire entendre sa voix sur des sujets importants."
+  },
+  {
+    "id": 10,
+    "titre": "Créer du contenu",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Permet d’informer et d’éduquer sa communauté sur des enjeux politiques et de mettre en avant des ressources autour d’une thématique."
+  },
+  {
+    "id": 11,
+    "titre": "Boycotter",
+    "facilite": "Moyen",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "L’argent que nous dépensons à un impact. Boycotter des marques qui vont à l’encontre de nos valeurs est un moyen de donner son opinion et de ne pas soutenir les marques avec qui nous sommes en désaccord."
+  },
+  {
+    "id": 12,
+    "titre": "Manifester",
+    "facilite": "Moyen",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Permet de faire entendre sa voix et ses opinions."
+  },
+  {
+    "id": 13,
+    "titre": "Acheter responsable",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Soutenir des entreprises qui travaillent de manière respectueuse envers leurs employés et la planète."
+  },
+  {
+    "id": 14,
+    "titre": "Mettre en open source des données d'utilité publiques",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Aide à rendre l’information accessible pour tous gratuitement."
+  },
+  {
+    "id": 15,
+    "titre": "Créer des outils numériques",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Donne du pouvoir aux usagers pour faciliter leur action politique"
+  },
+  {
+    "id": 16,
+    "titre": "Divulguer à la presse un scandale",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Permet de mettre en lumière des injustices ou des scandales cachés au grand public."
+  },
+  {
+    "id": 17,
+    "titre": "Mettre son métier au service des activistes",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Aide à reconnecter son travail avec ses valeurs. Permet de trouver du sens et de l’épanouissement dans son travail."
+  },
+  {
+    "id": 18,
+    "titre": "Imaginer des futurs souhaitables",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet de rendre possible un futur désiré dans l’esprit des gens"
+  },
+  {
+    "id": 19,
+    "titre": "Débattre",
+    "facilite": "Moyen",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Permet de construire sa pensée critique, de développer un argumentaire solide et d’apprendre."
+  },
+  {
+    "id": 20,
+    "titre": "Se renseigner sur ses causes",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Lent",
+    "description": "Permet de s’instruire sur des sujets."
+  },
+  {
+    "id": 21,
+    "titre": "Se présenter aux élections",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Permet de mettre en œuvre sa vision et ses valeurs à grande échelle."
+  },
+  {
+    "id": 22,
+    "titre": "Assister à un meeting",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Permet de s’informer et d’échanger."
+  },
+  {
+    "id": 23,
+    "titre": "Prendre soin de soi et des autres (sinon on peut pas militer)",
+    "facilite": "Difficile",
+    "echelle": "Individuel",
+    "rapidite": "Lent",
+    "description": "Veiller à ce que notre condition physique et psychologique nous permette de garder de la force pour le long terme"
+  },
+  {
+    "id": 24,
+    "titre": "Appeler un numéro vert",
+    "facilite": "Facile",
+    "echelle": "Individuel",
+    "rapidite": "Rapide",
+    "description": "Avoir facilement une personne réelle qui réponds à notre problématique afin d’agir sur soi ou son entourage"
+  },
+  {
+    "id": 25,
+    "titre": "Aller à un lieu associatif",
+    "facilite": "Facile",
+    "echelle": "Collectif",
+    "rapidite": "Moyen",
+    "description": "Permet de créer du lien avec les associations autour de soi"
+  },
+  {
+    "id": 26,
+    "titre": "Écrire à un élu (président, député, ...)",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet de faire connaître une opinion et de partager ses idées à un élu qui a plus de pouvoir pour la mettre en œuvre."
+  },
+  {
+    "id": 27,
+    "titre": "Encourager les gens à aller voter",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Encourage les gens à faire entendre leur voix. Peut être un moyen de commencer une discussion sur la politique."
+  },
+  {
+    "id": 28,
+    "titre": "Réparer les objets et vêtements",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet d‘acheter moins souvent et d’allonger la durée de vie des objets, ce qui réduit notre impact environnemental."
+  },
+  {
+    "id": 29,
+    "titre": "Prendre les transports en commun ou le vélo",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet de réduire son empreinte carbone."
+  },
+  {
+    "id": 30,
+    "titre": "Manger moins ou pas de viande",
+    "facilite": "Difficile",
+    "echelle": "Individuel",
+    "rapidite": "Lent",
+    "description": "Permet de réduire son empreinte environnementale."
+  },
+  {
+    "id": 31,
+    "titre": "Faire du bénévolat",
+    "facilite": "Moyen",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Mettre son énergie au service du commun"
+  },
+  {
+    "id": 32,
+    "titre": "Acheter local",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Soutenir des entreprises qui travaillent avec des chaînes de production locales, ce qui réduit l'empreinte carbone des produits."
+  },
+  {
+    "id": 33,
+    "titre": "Choisir ses fournisseurs (banques, etc.)",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Lent",
+    "description": "L’argent que nous dépensons à un impact. Choisir des fournisseurs qui vont dans le sens de nos valeurs est un moyen de donner son opinion et de soutenir les entreprises qui agissent avec un intérêt social et environnemental."
+  },
+  {
+    "id": 34,
+    "titre": "Consommer moins",
+    "facilite": "Difficile",
+    "echelle": "Individuel",
+    "rapidite": "Lent",
+    "description": "Permet d‘acheter moins souvent, ce qui réduit notre impact sur la planète."
+  },
+  {
+    "id": 35,
+    "titre": "Se réapproprier les moyens de production (cultiver un jardin partagé par exemple)",
+    "facilite": "Difficile",
+    "echelle": "Collectif",
+    "rapidite": "Lent",
+    "description": "Permet de raccourcir les chaînes de production et de les rendre locales. Cela permet de réduire l'empreinte écologique et de créer du lien social."
+  },
+  {
+    "id": 36,
+    "titre": "Lire de la théorie politique",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet d’apprendre sur des sujets variés en politique et de se forger un esprit critique."
+  },
+  {
+    "id": 37,
+    "titre": "Voir des vidéos youtube politique",
+    "facilite": "Moyen",
+    "echelle": "Individuel",
+    "rapidite": "Moyen",
+    "description": "Permet d’apprendre sur des sujets variés en politique et de se forger un esprit critique."
+  }
+]
