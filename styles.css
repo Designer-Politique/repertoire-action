@@ -1,0 +1,66 @@
+/* Shared base styles */
+:root{
+  --primary:#007BFF;
+  --primary-dark:#0056b3;
+  --bg:#fafafa;
+  --card-bg:#fff;
+  --muted:#666;
+}
+html,body{height:100%;}
+body{font-family:Arial, sans-serif; margin:20px; background:var(--bg); color:#222}
+h1{margin:0}
+
+/* Header */
+.site-header{display:flex;align-items:center;justify-content:center;background-color:var(--primary);color:white;padding:10px;border-radius:0 0 15px 15px;margin-bottom:25px}
+.site-header.compact{padding:12px;border-radius:0 0 10px 10px}
+.site-header img{height:48px;width:48px;object-fit:cover;border-radius:50%;margin-right:10px}
+.site-header h1{font-size:1.5rem}
+
+/* Filters */
+.filters{margin:20px 0;text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.filters label{display:flex;align-items:center;gap:8px}
+select{padding:6px 8px;border-radius:6px;border:1px solid #ccc}
+
+/* Grid and cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px}
+.card{display:flex;flex-direction:column;justify-content:space-between;border:1px solid #ddd;border-radius:10px;padding:15px;box-shadow:0 2px 5px rgba(0,0,0,0.06);text-align:left;min-height:220px;background:var(--card-bg)}
+.card h2{font-size:1.1rem;margin:0 0 8px}
+.card p{margin:6px 0;color:#444;font-size:0.95rem}
+.btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:6px;background:var(--primary);color:white;text-decoration:none;text-align:center}
+.btn:hover{background:var(--primary-dark)}
+
+/* Detail/post styles */
+.post{width:100%;max-width:720px;background:var(--card-bg);border:1px solid #dbdbdb;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);overflow:hidden;margin:0 auto}
+.post-header{padding:18px;font-weight:bold;border-bottom:1px solid #eee;font-size:1.25rem}
+.post-content{padding:18px}
+.post-description{margin:12px 0;color:#333;line-height:1.6}
+.tags{margin-top:12px}
+.tag{display:inline-block;margin-right:8px;color:var(--primary);text-decoration:none;font-size:14px}
+.post-footer{padding:15px;border-top:1px solid #eee;text-align:center}
+a.back{color:#555;text-decoration:none}
+a.back:hover{text-decoration:underline}
+
+header.page-header{display:block;text-align:center;margin-bottom:20px}
+header.page-header img{height:80px;width:80px;object-fit:cover;border-radius:50%;margin-bottom:10px}
+
+/* Responsive adjustments */
+@media (max-width:700px){
+  body{margin:12px}
+  .site-header{padding:12px;border-radius:0 0 10px 10px}
+  .site-header h1{font-size:1.1rem}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .card{min-height:160px}
+.btn{
+    width:100%;
+    display:block;
+    box-sizing:border-box;
+    max-width:100%;
+}
+  .post{max-width:100%;border-radius:10px}
+  .post-header{font-size:1.05rem;padding:12px}
+  .post-content{padding:12px}
+  header.page-header img{height:64px;width:64px}
+}
+
+/* Small tweak for embedded JSON display fallback */
+.empty-message{color:gray;font-style:italic}
