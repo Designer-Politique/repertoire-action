@@ -1,6 +1,9 @@
 # repertoire-action
 Un template pour que les militants puissent lister des actions inspirantes pour aider les gens à passer à l’action
 
+Vous pouvez voir à quoi cela ressemble sur cette page :
+https://designerpolitique.com/repertoire-action/action.html
+
 ## Contenu du dépôt
 
 - `action.html` — page principale pour lister les actions.
